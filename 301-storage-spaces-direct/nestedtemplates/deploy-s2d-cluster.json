@@ -264,14 +264,14 @@
     {
       "apiVersion": "2018-06-01",
       "type": "Microsoft.Compute/virtualMachines/extensions",
-      "name": "[concat(variables('vmNamePrefix'),copyindex(1),'/domainjoin')]",
+      "name": "[concat(variables('vmNamePrefix'),copyindex(),'/domainjoin')]",
       "location": "[parameters('location')]",
       "dependsOn": [
         "virtualMachineLoop"
       ],
       "copy": {
         "name": "virtualMachineDomainLoop",
-        "count": "[sub(parameters('vmCount'),1)]"
+        "count": "[sub(parameters('vmCount'),0)]"
       },
       "properties": {
         "publisher": "Microsoft.Compute",
@@ -293,7 +293,7 @@
     {
       "type": "Microsoft.Compute/virtualMachines/extensions",
       "name": "[concat(variables('vmNamePrefix'),copyindex(1),'/s2dPrep')]",
-      "apiVersion": "2015-06-15",
+      "apiVersion": "2018-06-01",
       "location": "[parameters('location')]",
       "dependsOn": [
         "virtualMachineLoop",
@@ -318,7 +318,7 @@
     {
       "type": "Microsoft.Compute/virtualMachines/extensions",
       "name": "[concat(variables('vmNamePrefix'),'0/s2dConfig')]",
-      "apiVersion": "2015-06-15",
+      "apiVersion": "2018-06-01",
       "location": "[parameters('location')]",
       "dependsOn": [
         "virtualMachineLoop",
