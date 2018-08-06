@@ -267,10 +267,11 @@
       "name": "[concat(variables('vmNamePrefix'),copyindex(1),'/domainjoin')]",
       "location": "[parameters('location')]",
       "dependsOn": [
-        "virtualMachineLoop"
+        "virtualMachineLoop",
+        "virtualMachineExtensionLoop"
       ],
       "copy": {
-        "name": "virtualMachineExtensionLoop",
+        "name": "virtualMachineDomainLoop",
         "count": "[sub(parameters('vmCount'),1)]"
       },
       "properties": {
