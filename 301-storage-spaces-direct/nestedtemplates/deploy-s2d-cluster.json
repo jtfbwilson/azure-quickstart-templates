@@ -267,8 +267,7 @@
       "name": "[concat(variables('vmNamePrefix'),copyindex(1),'/domainjoin')]",
       "location": "[parameters('location')]",
       "dependsOn": [
-        "virtualMachineLoop",
-        "virtualMachineExtensionLoop"
+        "virtualMachineLoop"
       ],
       "copy": {
         "name": "virtualMachineDomainLoop",
@@ -297,7 +296,8 @@
       "apiVersion": "2015-06-15",
       "location": "[parameters('location')]",
       "dependsOn": [
-        "virtualMachineLoop"
+        "virtualMachineLoop",
+        "virtualMachineDomainLoop"
       ],
       "copy": {
         "name": "virtualMachineExtensionLoop",
