@@ -3,7 +3,7 @@
   "contentVersion": "1.0.0.0",
   "parameters": {
     "namePrefix": {
-      "value": "s2d"
+      "value": "tst"
     },
     "existingDomainName": {
       "value": ""
@@ -14,28 +14,28 @@
     "adminPassword": {
       "reference": {
         "keyVault": {
-            "id": "/subscriptions/ac787c18-bfdd-46e2-824b-ca567f069426/resourceGroups/AZRDMIS16-RG/providers/Microsoft.KeyVault/vaults/RDMISecrets"
+            "id": "/subscriptions/c05079d4-ae7d-4186-ae74-5f4444129f26/resourceGroups/rg-projtest/providers/Microsoft.KeyVault/vaults/kv-projtest"
         },
-        "secretName": "DomainJoinPW"
+        "secretName": "sa-servicePW"
        }
       },
     "existingVirtualNetworkName": {
-      "value": "VPCxAzureMedicalNA-eastus"
+      "value": "vnet-infra-southcentralus"
     },
     "existingVirtualNetworkRGName": {
-      "value": "VPCxAzureMedicalNA"
+      "value": "rg-aad"
     },    
     "existingSubnetName": {
-      "value": "AZR-001-20160212-TestSubnet"
+      "value": "vnet-infra-rdmi"
     },
     "vmDiskCount": {
       "value": 2
     },
     "sofsName": {
-      "value": "JnJS2D"
+      "value": "tstS2D"
     },
     "shareName": {
-      "value": "UPD"
+      "value": "tstUPD"
     }
   }
 }
