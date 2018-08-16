@@ -3,7 +3,7 @@
   "contentVersion": "1.0.0.0",
   "parameters": {
     "namePrefix": {
-      "value": "tst"
+      "value": "s2d"
     },
     "existingDomainName": {
       "value": ""
@@ -32,10 +32,10 @@
       "value": 2
     },
     "sofsName": {
-      "value": "tstS2D"
+      "value": "S2D"
     },
     "shareName": {
-      "value": "tstUPD"
+      "value": "UPD"
     }
   }
 }
