@@ -14,9 +14,9 @@
     "adminPassword": {
       "reference": {
         "keyVault": {
-            "id": "/subscriptions/c05079d4-ae7d-4186-ae74-5f4444129f26/resourceGroups/rg-projtest/providers/Microsoft.KeyVault/vaults/kv-projtest"
+            "id": "/subscriptions/c05079d4-ae7d-4186-ae74-5f4444129f26/resourceGroups/AZRDMIS16-RG/providers/Microsoft.KeyVault/vaults/RDMISecrets"
         },
-        "secretName": "sa-servicePW"
+        "secretName": "DomainJoinPW"
        }
       },
     "existingVirtualNetworkName": {
